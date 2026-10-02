@@ -8,14 +8,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 # Student Details
-student_id = input("Enter Student ID: ")
-student_name = input("Enter name: ")
+student_name = input("Enter name")
 subject = "Artificial Intelligence"
 
 print("---------------------------------")
 print("STUDENT PERFORMANCE PREDICTOR")
 print("---------------------------------")
-print("Student ID:", student_id)
 print("Student Name:", student_name)
 print("Subject:", subject)
 print("---------------------------------\n")
@@ -40,7 +38,6 @@ print(df.head(), "\n")
 df["Result"] = df["Result"].map({"Pass": 1, "Fail": 0})
 
 # Step 4: Choose features
-# Student_ID and Name identify the student but are NOT used by the model.
 features = ["Study_Hours", "Attendance", "Internal_Marks"]
 label = "Result"
 
